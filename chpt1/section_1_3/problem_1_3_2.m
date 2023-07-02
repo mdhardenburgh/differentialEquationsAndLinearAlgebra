@@ -1,0 +1,73 @@
+% Starting from y(0) = 1, find the solution to dy/dt = y at time t = 1.
+% Starting from that y(1), solve dy/dt = -y to time t = 2. Draw a rough
+% graph of y(t) from t = 0 to t = 2. What does this say about e^-1 times e?
+%
+% 1.3.2.A Starting from y(0) = 1, find the solution to dy/dt = y at time 
+% t = 1
+% 1.3.2.B Starting from that y(1), solve dy/dt = -y to time t = 2
+% 1.3.2.C Draw a rough graph of y(t) from t = 0 to t = 2
+% 1.3.2.D What does this say about e^-1 times e?
+
+% 1.3.2.A Plot of the solution to dy/dt = y which is y1 = e^t
+
+t = 0.0:0.01:1.0;
+
+y1=exp(t);
+figure;
+plot(t,y1);
+legend("y1");
+
+ylim([0 3]);
+xlim([-1 3])
+grid on;
+title("1.3.2.A plot of y1(t)=e^{t}");
+xlabel("time");
+ylabel("y");
+
+% 1.3.2.B Plot of the solution to dy/dt = -y which is y2 = e^t
+
+t = 0.0:0.01:2.0;
+
+y1=exp(-t);
+figure;
+plot(t,y1);
+legend("y1");
+
+ylim([0 2]);
+xlim([-1 3])
+grid on;
+title("1.3.2.B plot of y1(t)=e^{-t}");
+xlabel("time");
+ylabel("y");
+
+% 1.3.2.C Plot of y1(t)=e^{t} and y2(t)=e^{2-t}
+t1 = 0.0:0.01:1.0;
+t2 = 1.0:0.01:2.0;
+
+y2=exp(2-t2);
+y1=exp(t1);
+figure;
+plot(t1,y1,t2,y2);
+legend("y1", "y2");
+ylim([0 3]);
+xlim([-1 3])
+grid on;
+title("1.3.2.C plot of y1(t)=e^{t} and y2(t)=e^{2-t}");
+xlabel("time");
+ylabel("y");
+
+% 1.3.2.D Plot of y1(t)=e^t and y2(t)=e^(-t)
+
+t = 0.0:0.01:1.0;
+
+y1=exp(t);
+y2=exp(-t);
+figure;
+plot(t,y1,t,y2);
+legend("y1, y2");
+ylim([0 3]);
+xlim([-1 3])
+grid on;
+title("1.3.2.D plot of y1(t)=e^{t} and y2(t)=e^{-t}");
+xlabel("time");
+ylabel("y");

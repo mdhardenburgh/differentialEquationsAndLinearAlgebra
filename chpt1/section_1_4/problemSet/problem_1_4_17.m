@@ -6,16 +6,16 @@
 
 t = 0.0:0.01:10.0;
 
-y = (-1/2)*(exp(-2*(t-4))) + (1/2)*(exp(-2*(t-6)));
+y = ((-1/2)*(exp(8-(2*t))-1)).*heaviside(t-4) + ((1/2)*(exp(12-(2*t))-1)).*heaviside(t-6);
 
 f = figure;
 plot(t, y);
 legend("y");
 
-ylim([0 50]);
-xlim([4 6]);
+ylim([0 1]);
+xlim([3 10]);
 grid on;
-title("1.4.17 plot of A) y(t) = (-1/2)e^{-2(t-4)} + (1/2)e^{-2(t-6)}");
+title("1.4.17 plot of y(t) = (-1/2)*(e^{8-2t} - 1)H(t-4) + (1/2)(e^{12-2t} - 1)H(t-6)");
 xlabel("time");
 ylabel("y");
 uiwait(f);

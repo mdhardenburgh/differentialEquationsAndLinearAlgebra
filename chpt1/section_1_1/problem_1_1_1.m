@@ -1,3 +1,5 @@
+% run with $ matlab -batch "problem_1_1_1"
+
 t = -3.0:0.01:3.0;
 
 y1=exp(t);
